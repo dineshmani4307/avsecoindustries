@@ -20,6 +20,8 @@
   margin-bottom: 4rem;
 }
 
+/* LEFT PANEL */
+
 .products-info {
   background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
   padding: 3rem;
@@ -86,25 +88,25 @@
   text-align: center;
 }
 
-/* GRID OF CARDS */
+/* GRID OF CARDS — 2 COLUMNS + NATURAL HEIGHT */
 
 .sizes-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
+  align-items: start;
 }
 
 /* CARD */
 
 .size-card {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--light-teal) 100%);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 1.2rem;
+  border-radius: 14px;
   text-align: center;
   color: white;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(2, 106, 97, 0.2);
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,35 +116,30 @@
   box-shadow: 0 10px 30px rgba(2, 106, 97, 0.3);
 }
 
-/* IMAGE ONLY — NO WRAPPER */
+/* IMAGE — SMALLER + NOT SQUARE */
 
 .size-image {
-  width: 85%;
-  max-width: 160px;
+  width: 100%;
+  max-width: 110px;
   height: auto;
   object-fit: contain;
-  margin: 0 auto 1rem auto;
-  display: block;
-
-  border-radius: 12px;     /* 🔥 round the edges */
-  overflow: hidden;        /* 🔥 make rounding clean */
-
-  /* subtle floating effect */
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
   filter: drop-shadow(0 10px 16px rgba(0,0,0,.25));
 }
 
 /* SIZE TEXT */
 
 .size-number {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 /* DESCRIPTION */
 
 .size-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   opacity: 0.95;
 }
 
@@ -204,29 +201,35 @@
   }
 }
 
+/* 📱 MOBILE — KEEP 2 COLUMNS */
+
 @media (max-width: 768px) {
   .products {
     padding: 4rem 1rem;
   }
 
   .sizes-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
   }
 
   .size-image {
-    max-width: 140px;
+    max-width: 95px;
   }
 }
+
+/* 📱 EXTRA SMALL — STILL 2 COLUMNS */
 
 @media (max-width: 480px) {
   .products {
     padding: 3rem 0.75rem;
   }
 
-  .size-number {
-    font-size: 2.2rem;
+  .sizes-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  
+  .size-number {
+    font-size: 2rem;
+  }
 }
