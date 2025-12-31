@@ -124,4 +124,16 @@
     min-height: 180px;
     padding: 0.75rem;
   }
+  /* remove the green down arrow */
+.plate-3d-container::after,
+.plate-3d-wrapper::after {
+  content: none !important;
+}
+h3::after,
+p::after,
+span::after {
+  content: none !important;
+}
+
+
 }

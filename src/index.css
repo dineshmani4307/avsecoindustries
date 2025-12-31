@@ -40,3 +40,7 @@ html {
   background: var(--light-teal);
 }
 
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}

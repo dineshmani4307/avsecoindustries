@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             className="footer-section"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const Footer = () => {
               <li><a href="#products">Products</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             className="footer-section"
