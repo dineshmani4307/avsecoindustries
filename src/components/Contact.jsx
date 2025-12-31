@@ -37,7 +37,7 @@ const Contact = () => {
       name: 'Ashok Kumar',
       role: 'Managing Director',
       phone: '9444730165',
-      icon: <FaBriefcase />
+      icon: <FaUser />
     },
     {
       name: 'Vamsi',

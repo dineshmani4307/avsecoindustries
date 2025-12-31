@@ -147,6 +147,7 @@
   }
 
   .footer-logo.big-logo img {
+    transform: translateX(-10px);
     max-width: 180px;  /* slightly smaller on mobile */
   }
 }
