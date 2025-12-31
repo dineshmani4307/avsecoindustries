@@ -124,6 +124,9 @@
   margin: 0 auto 1rem auto;
   display: block;
 
+  border-radius: 12px;     /* 🔥 round the edges */
+  overflow: hidden;        /* 🔥 make rounding clean */
+
   /* subtle floating effect */
   filter: drop-shadow(0 10px 16px rgba(0,0,0,.25));
 }
@@ -224,4 +227,6 @@
   .size-number {
     font-size: 2.2rem;
   }
+
+  
 }
