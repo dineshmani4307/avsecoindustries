@@ -1,0 +1,127 @@
+.plate-3d-container {
+  width: 100%;
+  height: auto; /* Changed from 100% to auto */
+  aspect-ratio: 1 / 1; /* Makes it square, adjust as needed */
+  max-width: 500px; /* Maximum width for larger screens */
+  max-height: 500px; /* Maximum height for larger screens */
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto; /* Center the container */
+}
+
+.plate-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%; /* Changed to 100% */
+  max-height: 100%; /* Changed to 100% */
+  object-fit: contain;
+  object-position: center;
+  border-radius: 20px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.plate-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 2rem;
+}
+
+.plate-placeholder p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.plate-placeholder-hint {
+  font-size: 0.85rem !important;
+  color: #666;
+}
+
+/* Tablet view (768px and below) */
+@media (max-width: 768px) {
+  .plate-3d-container {
+    aspect-ratio: 4 / 3; /* Slightly wider than tall for tablets */
+    max-width: 400px;
+    max-height: 300px;
+    min-height: 250px; /* Fallback for older browsers */
+  }
+  
+  .plate-image {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .plate-placeholder {
+    min-height: 250px;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile view (480px and below) - CRITICAL FIXES */
+@media (max-width: 480px) {
+  .plate-3d-container {
+    width: 90vw; /* Use viewport width for better mobile scaling */
+    height: 90vw; /* Square based on viewport width */
+    max-width: 300px;
+    max-height: 300px;
+    min-height: 200px;
+    aspect-ratio: 1 / 1; /* Keep it square on mobile */
+    margin: 0 auto; /* Ensure it's centered */
+  }
+  
+  .plate-image {
+    width: 95%; /* Slightly smaller to prevent edge touching */
+    height: 95%;
+    max-width: 95%;
+    max-height: 95%;
+  }
+  
+  .plate-placeholder {
+    min-height: 200px;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .plate-placeholder p {
+    font-size: 0.9rem;
+  }
+  
+  .plate-placeholder-hint {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Extra small mobile devices (360px and below) */
+@media (max-width: 360px) {
+  .plate-3d-container {
+    width: 85vw;
+    height: 85vw;
+    max-width: 250px;
+    max-height: 250px;
+    min-height: 180px;
+    border-radius: 15px;
+  }
+  
+  .plate-image {
+    border-radius: 15px;
+  }
+  
+  .plate-placeholder {
+    min-height: 180px;
+    padding: 0.75rem;
+  }
+}
