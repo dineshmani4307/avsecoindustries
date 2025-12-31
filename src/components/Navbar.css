@@ -50,7 +50,7 @@
 
 .logo-icon {
   font-size: 2rem;
-  color: #ffff;
+  color: #4ade80;
   animation: rotate 3s ease-in-out infinite;
 }
 
@@ -97,7 +97,7 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #4ade80;
+  color: #ffff;
   cursor: pointer;
 }
 
