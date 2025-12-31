@@ -1,6 +1,17 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaLeaf, FaEnvelope, FaMapMarkerAlt, FaPhone, FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { 
+  FaLeaf, 
+  FaEnvelope, 
+  FaMapMarkerAlt, 
+  FaPhone, 
+  FaWhatsapp, 
+  FaFacebook, 
+  FaInstagram, 
+  FaLinkedin 
+} from 'react-icons/fa'
+
+import logo from '../Assets/avs-logo.png'   // 👈 YOUR LOGO HERE
 import './Footer.css'
 
 const Footer = () => {
@@ -10,6 +21,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
+
+          {/* ---------- LOGO SECTION ---------- */}
           <motion.div
             className="footer-section"
             initial={{ opacity: 0, y: 30 }}
@@ -17,14 +30,15 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="footer-logo">
-              <FaLeaf className="footer-logo-icon" />
-              <h3>AVS ECO INDUSTRIES</h3>
+            <div className="footer-logo big-logo">
+              <img src={logo} alt="AVS Eco Industries Logo" />
             </div>
+
             <p>
               Leading the green revolution with premium eco-friendly areca leaf plates.
               Sustainable, biodegradable, and beautiful.
             </p>
+
             <div className="social-links">
               <a href="#" aria-label="Facebook">
                 <FaFacebook />
@@ -41,23 +55,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* <motion.div
-            className="footer-section"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#benefits">Benefits</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </motion.div> */}
-
+          {/* ---------- CONTACT SECTION ---------- */}
           <motion.div
             className="footer-section"
             initial={{ opacity: 0, y: 30 }}
@@ -87,6 +85,7 @@ const Footer = () => {
             </ul>
           </motion.div>
 
+          {/* ---------- WHY CHOOSE US --------- */}
           <motion.div
             className="footer-section"
             initial={{ opacity: 0, y: 30 }}
@@ -105,9 +104,9 @@ const Footer = () => {
           </motion.div>
         </div>
 
+        {/* ---------- COPYRIGHT ---------- */}
         <div className="footer-bottom">
           <p>&copy; {currentYear} AVS ECO INDUSTRIES. All rights reserved.</p>
-          {/* <p>Made with <span className="heart">❤️</span> for a greener planet</p> */}
         </div>
       </div>
     </footer>
@@ -115,4 +114,3 @@ const Footer = () => {
 }
 
 export default Footer
-
